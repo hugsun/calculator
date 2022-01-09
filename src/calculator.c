@@ -52,13 +52,13 @@ static void FormatInput(CalcContext *context)
     else if (context->input_buffer_position > 1)
     {
         char *p = context->input_buffer;
-        if (p[0] == '0' && p[1] != '.')
-        {
-            p[0] = p[1];
-            p[1] = 0;
-            context->input_buffer_position = 1;
-        }
-        else if (p[context->input_buffer_position - 1] == '.')
+        // if (p[0] == '0' && p[1] != '.')
+        // {
+        //     p[0] = p[1];
+        //     p[1] = 0;
+        //     context->input_buffer_position = 1;
+        // }
+        if (p[context->input_buffer_position - 1] == '.')
         {
             for (int i = 0; i < context->input_buffer_position - 1; i++)
             {
